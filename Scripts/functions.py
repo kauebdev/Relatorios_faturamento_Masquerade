@@ -57,3 +57,5 @@ def mapear_vendedores_por_similaridade(df, df_ref, threshold=85):
             logs.append(f"{nome} → [sem correspondência acima de {threshold}]")
 
     return df, logs
+
+
