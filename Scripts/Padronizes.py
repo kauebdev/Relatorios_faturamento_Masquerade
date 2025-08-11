@@ -64,9 +64,9 @@ def PadronizeNotasFiscais(): # ✔️
         df_nfs_masquerade = df_nfs_masquerade[~df_nfs_masquerade['Clie Cgc Cpf'].isin(ice)]
         df_nfs_masquerade['Dt Sai Ent'] = pdDatetime(df_nfs_masquerade['Dt Sai Ent'] , dayfirst=True)
         df_nfs_masquerade['Dt. emissão'] = pdDatetime(df_nfs_masquerade['Dt. emissão'], dayfirst=True)
-        df_nfs_masquerade['Vl Total Desc'] = df_nfs_masquerade['Vl Total Desc'].astype(str).str.replace(',','')
+        # df_nfs_masquerade['Vl Total Desc'] = df_nfs_masquerade['Vl Total Desc'].astype(str).str.replace(',','')
         df_nfs_masquerade['Vl Total Nota'] = df_nfs_masquerade['Vl Total Nota'].astype(str).str.replace(',','')
-        df_nfs_masquerade['Vl Total Desc'] = pdNumeric(df_nfs_masquerade['Vl Total Desc'],errors='coerce')
+        # df_nfs_masquerade['Vl Total Desc'] = pdNumeric(df_nfs_masquerade['Vl Total Desc'],errors='coerce')
         df_nfs_masquerade['Vl Total Nota'] =  pdNumeric(df_nfs_masquerade['Vl Total Nota'],errors='coerce')
         df_nfs_masquerade['Nr Pedido'] =  pdNumeric(df_nfs_masquerade['Nr Pedido'],errors='coerce')
         

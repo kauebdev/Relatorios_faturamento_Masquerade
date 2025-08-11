@@ -29,6 +29,4 @@
 # tutorial de ocmo usar 
 # padronização github
 
-vendedor mes cidade
-eventos
 
