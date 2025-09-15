@@ -67,7 +67,7 @@ def EhNovo(mes):
 
     # Marcar primeira compra real
     df_all["primeira_compra"] = ~df_all["Clie Cgc Cpf"].duplicated()
-    
+    df_all['Dt. emissão'] = pd.to_datetime(df_all["Dt. emissão"])
     df_novos = df_all[(df_all["Dt. emissão"].dt.month == mes) &
                 (df_all['primeira_compra'] == True)]
     
